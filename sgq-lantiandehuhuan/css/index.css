@@ -1,0 +1,68 @@
+*{
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	font-family: '微软雅黑';
+}
+.weiqi6{
+		width: 150px;
+		height: 150px;
+		position: absolute;
+		bottom: 20%;
+		left: 50%;
+		margin-left:-75px;
+		background-image: url(img/weiqi4.png);
+		background-size:contain;
+		z-index: 100;
+		background-repeat: no-repeat;
+
+	}
+.kaichangbai{
+	width: 400px;
+	height: 400px;
+	margin:0 auto;
+	font-size: 24px;
+	font-weight: bold;
+	text-align: center;
+	line-height: 50px;
+	position: relative;
+	top: 0;
+	left: 0;
+	overflow: hidden;
+	
+
+}
+.kaichangbai p{
+	position: absolute;
+	top: 100%;
+	left: 0;
+	color: #c3feac;
+	z-index: 20;
+}
+.kaichangbai div{
+	width: 100%;height: 100%;
+	position: absolute;
+	top:0;
+	left: 0;
+	background:rgba(50,50,50,0.5);
+	z-index: 1;
+}
+.jd,.zc,.kn,.ms{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+
+	background-image:url(../img/yun.png) ;
+	background-repeat:no-repeat;
+	background-size:contain;
+	cursor: pointer;
+	font-weight: bold;
+	display: none;
+}
+.ms{
+	background: none;
+	z-index: 2;
+	display: block;
+}
