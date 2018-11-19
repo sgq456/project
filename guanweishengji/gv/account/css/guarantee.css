@@ -1,0 +1,178 @@
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+.content {
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  background: url("../images/sgq_bg@2x.png");
+  padding-bottom: .84rem;
+  box-sizing: border-box;
+}
+.topzhuangshi {
+  height: 3.24rem;
+  text-align: right;
+  padding-right: 1.56rem;
+}
+.topzhuangshi img {
+  float: right;
+  width: 4.86rem;
+  margin-top: .14rem;
+}
+.baozhang {
+  margin-top: .32rem;
+}
+/* 板块 */
+.baozhang .ban {
+  width: 13.64rem;
+  margin: 0 auto;
+  background: #febe9e;
+  border-radius: .3rem;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 1.44rem;
+  padding-bottom: .26rem;
+}
+.baozhang .ban .con {
+  width: 12.9rem;
+  height: 12.3rem;
+  background: url("../images/sgq_ban@2x.png");
+  background-size: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+.baozhang .ban .con .item {
+  height: 50%;
+  position: relative;
+  box-sizing: border-box;
+  padding-top: 1.6rem;
+  text-align: center;
+  color: #323433;
+}
+.baozhang .ban .con .item .ms {
+  font-size: .48rem;
+  margin-bottom: .4rem;
+}
+.baozhang .ban .con .item .money {
+  font-size: 1.16rem;
+}
+.baozhang .ban .con .item .money i {
+  font-size: .58rem;
+}
+.baozhang .ban .note {
+  margin-top: .3rem;
+  margin-left: auto;
+  margin-right: auto;
+  color: #ff6f4b;
+  font-size: .44rem;
+  line-height: .6rem;
+  /*width: 8.5rem;*/
+  text-align: center;
+}
+.baofei {
+  margin-top: .8rem;
+}
+.baofei .baiban {
+  background: #fff;
+  width: 12.9rem;
+  margin: 0 auto;
+  box-sizing: border-box;
+  position: relative;
+  padding-top: 2.04rem;
+  padding-bottom: .48rem;
+}
+.baofei .zongjie {
+  width: 11.52rem;
+  height: 3.96rem;
+  background: url("../images/sgq_botmoney@2x.png");
+  margin: 0 auto;
+  background-size: 100%;
+}
+.baofei .zongjiecon {
+  width: 9.42rem;
+  height: 2.22rem;
+  padding-top: .58rem;
+  padding-left: 1.12rem;
+}
+.baofei .zongjiecon .list {
+  float: left;
+  text-align: center;
+}
+.baofei .zongjiecon .left {
+  width: 3.24rem;
+  font-size: .6rem;
+  padding-top: .38rem;
+  color: #f84948;
+  font-weight: bold;
+}
+.baofei .zongjiecon .left span {
+  font-size: .96rem;
+}
+.baofei .zongjiecon .left .ms {
+  margin-top: .32rem;
+  color: #32302e;
+  font-weight: normal;
+}
+.baofei .zongjiecon .right .ms {
+  margin-top: .18rem;
+}
+.baofei .zongjiecon .right {
+  width: 6.15rem;
+  font-size: .46rem;
+  color: #fff;
+  padding-top: .46rem;
+}
+.baofei .zongjiecon .right span {
+  font-size: .76rem;
+}
+.baofei .zongjiecon .ms {
+  font-size: .4rem;
+}
+/*板块标题*/
+.sgqtitle {
+  position: absolute;
+  top: -0.32rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 10.44rem;
+  height: 1.34rem;
+  line-height: 1.34rem;
+  background: url("../images/sgq_title@2x.png");
+  background-size: 100%;
+  text-align: center;
+  color: #fff;
+  font-size: .64rem;
+}
+/* 板块内小标题*/
+.mintitle {
+  height: .94rem;
+  position: absolute;
+  left: -0.18rem;
+  top: .5rem;
+}
+.mintitle .text {
+  position: relative;
+  z-index: 2;
+  height: .94rem;
+  padding: .22rem .52rem .2rem .54rem;
+  box-sizing: border-box;
+  background: #ffae5e;
+  color: #fff;
+  font-size: .52rem;
+  border-top-right-radius: .47rem;
+  border-bottom-right-radius: .47rem;
+}
+.mintitle .jiao {
+  position: absolute;
+  width: 0;
+  height: 0;
+  left: 0;
+  bottom: -0.2rem;
+  border-right: .2rem solid #a66823;
+  border-top: .2rem solid transparent;
+  border-bottom: .2rem solid transparent;
+  z-index: 1;
+}

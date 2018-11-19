@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>保障账户</title>
+    <base href="../../">
+    <link rel="stylesheet" href="gv/common/css/reset.css">
+    <link rel="stylesheet" href="gv/account/css/guarantee.css">
+</head>
+<body>
+<div class="content">
+    <!-- 顶部装饰-->
+    <div class="topzhuangshi">
+        <img src="gv/account/images/sgq_top_zs@2x.png" alt="">
+    </div>
+    <!--保障板块-->
+    <div class="baozhang">
+        <div class="ban">
+            <!-- 标题 -->
+            <div class="sgqtitle">保障</div>
+            <!--内容-->
+            <div class="con">
+                <div class="me item">
+                    <div class="mintitle">
+                        <div class="text">我的保费</div>
+                        <div class="jiao"></div>
+                    </div>
+                    <div class="ms">保障金额</div>
+                    <div class="money">
+                        <i>￥</i><span>2,000.09</span><i>万元</i>
+                    </div>
+                </div>
+                <div class="family item">
+                    <div class="mintitle">
+                        <div class="text">家人保障</div>
+                        <div class="jiao"></div>
+                    </div>
+                    <div class="ms">保障金额</div>
+                    <div class="money">
+                        <i>￥</i><span>2,000.09</span><i>万元</i>
+                    </div>
+                </div>
+            </div>
+            <!--底部提示-->
+            <div class="note">保额为您在我司有效保单的保额总计（万能险 <br> 除外）。实际理赔金额以理赔结果为准。</div>
+        </div>
+    </div>
+
+    <!--保费板块-->
+    <div class="baozhang baofei">
+        <div class="ban">
+            <!-- 标题 -->
+            <div class="sgqtitle">保费</div>
+            <!--内容-->
+            <div class="baiban">
+                <div class="zongjie">
+                    <div class="mintitle">
+                        <div class="text">我的保障</div>
+                        <div class="jiao"></div>
+                    </div>
+                    <div class="zongjiecon">
+                        <!-- 超越投保人 -->
+                        <div class="left list">
+                            <div class="bfb"><span>80</span>%</div>
+                            <div class="ms">超越投保人</div>
+                        </div>
+                        <!-- 保险金额 -->
+                        <div class="right list">
+                            <div class="zmoney">￥<span>11,222,000</span>.00</div>
+                            <div class="ms">保险金额</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <!--底部提示-->
+            <div class="note">保费为您在我司缴纳所有保费总计。</div>
+        </div>
+    </div>
+</div>
+<script>
+    document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth/ 15 + "px";
+    // 改变窗口的时候重新计算大小
+    window.onresize = function() {
+        document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth/ 15 + "px";
+    }
+</script>
+
+</body>
+</html>

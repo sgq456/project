@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>全部服务</title>
+    <base href="../../">
+    <link rel="stylesheet" href="gv/common/css/reset.css">
+    <link rel="stylesheet" href="gv/account/css/bases.css">
+    <link rel="stylesheet" href="gv/account/css/icon.css">
+    <link rel="stylesheet" href="gv/account/css/more_serves.css">
+</head>
+<body>
+<div class="content more_servesBox" id="app">
+    <!-- 主体内容-->
+    <main>
+        <!-- 功能列表 -->
+        <section class="mainlist">
+            <div class="item" v-for="(item, index) in funlist" :key="index">
+                <h2 v-text="item.title" class="servestitle"></h2>
+                <ul>
+                    <li v-for="(citem, indexs) in item.list" :class="item.col == 3? 'col3':''" :key="indexs">
+                        <a :href="citem.url">
+                            <div class="img">
+                                <img :src="citem.img" alt="">
+                            </div>
+                            <p v-text="citem.title"></p>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+    </main>
+</div>
+<script>
+    document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth/ 15 + "px";
+    // 改变窗口的时候重新计算大小
+    window.onresize = function() {
+        document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth/ 15 + "px";
+    }
+</script>
+<script src="gv/common/js/vue.min.js"></script>
+<script src="gv/account/js/more_serves.js"></script>
+</body>
+</html>

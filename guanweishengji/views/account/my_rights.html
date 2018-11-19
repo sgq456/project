@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>我的权益</title>
+    <base href="../../">
+    <link rel="stylesheet" href="gv/common/css/reset.css">
+    <link rel="stylesheet" href="gv/account/css/bases.css">
+    <link rel="stylesheet" href="gv/account/css/icon.css">
+    <link rel="stylesheet" href="gv/account/css/account.css">
+</head>
+<body>
+<div class="content" id="app">
+    <!-- banner部分-->
+    <div class="banner">
+        <!-- 顶部头像 和 会员等级-->
+        <div class="touxiangBox">
+            <div class="leftside">
+                <!--头像-->
+                <div class="touxiang">
+                    <div class="imgbox">
+                        <img v-if="myinfo.img" :src="myinfo.img" alt="">
+                    </div>
+                </div>
+                <div class="name" v-text="myinfo.name"></div>
+                <div class="renzheng" v-if="myinfo.renzheng"></div>
+            </div>
+            <div class="rightside">
+                <!--会员等级-->
+                <div class="memberclass icon" :class="myinfo.memberclass == 1?'huangjin':''">
+
+                </div>
+            </div>
+        </div>
+        <!--积分-->
+        <div class="jifenbox">
+            <div class="wdjf f26">我的积分</div>
+            <div class="integralBox" :class="show?'start':''">
+                {{myinfo.integral | money}}
+                <div class="integral" :class="css3_bgclip?'show':''"> {{myinfo.integral | money}} </div>
+            </div>
+            <div class="cha">
+                还差<span v-text="memberclass_integral[myinfo.memberclass + 1].num - myinfo.integral"></span>积分升级<span v-text="memberclass_integral[myinfo.memberclass + 1].title"></span>会员
+            </div>
+            <ul class="memberlist">
+                <li v-for="(item, index) in memberclass_integral" :key="item.num">
+                    <i class="icon" :class="myinfo.memberclass >= index ? 'memberok' : 'memberno'"></i>
+                    <span v-text="item.title" :class="myinfo.memberclass >= index ? 'active' : ''"></span>
+                </li>
+            </ul>
+            <div class="tiao">
+                <div class="icon memberjindu jindu" :style="'width: '+ myinfo.jindu + '%;'"></div>
+                <div class="icon memberdian" :style="'left: '+ myinfo.jindu + '%;'"></div>
+            </div>
+        </div>
+        <!-- 我的权益-->
+        <div class="wdqy">
+            <img src="gv/account/images/sgq_quanyi@2x.png" alt="">
+        </div>
+    </div>
+    <!-- 主体内容-->
+    <main>
+        <!-- 保单概览 保障账户 投资账户-->
+        <section class="baodanBox shadowbox">
+            <ul>
+                <li>
+                    <a href="">
+                        <img src="gv/account/images/sgq_baodan1@2x.png" alt="">
+                        <p>保单概览</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="gv/account/images/sgq_baodan2@2x.png" alt="">
+                        <p>保障账户</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="">
+                        <img src="gv/account/images/sgq_baodan3@2x.png" alt="">
+                        <p>投资账户</p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+        <!-- 代办事项 -->
+        <section class="daibanBox">
+            <div class="daiban">
+                <div class="title">
+                    我的待办
+                </div>
+                <div class="con">
+                    <sgq-lunbo :list="daiban"></sgq-lunbo>
+                    <!--<ul>-->
+                        <!--<li v-for="(item, index) in daiban" :key="index">-->
+                            <!--<a :href="item.url" v-text="item.title"></a>-->
+                        <!--</li>-->
+                    <!--</ul>-->
+                </div>
+                <div class="more">
+                    <a href="" class="more">更多</a>
+                </div>
+            </div>
+        </section>
+        <!-- 功能列表 -->
+        <section class="mainlist">
+            <ul>
+                <li v-for="(item, index) in funlist">
+                    <a :href="item.url">
+                        <div class="img">
+                            <img :src="item.img" alt="">
+                        </div>
+                        <p v-text="item.title"></p>
+                    </a>
+                </li>
+            </ul>
+        </section>
+    </main>
+    <!-- 特色活动 -->
+    <div class="teseBox">
+        <div class="dbultitle">特色活动</div>
+        <ul>
+            <li v-for="(item, index) in teselist" :key="index">
+                <a :href="item.url">
+                    <img :src="item.img" alt="">
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="isbottom">
+        ~已经到底啦~
+    </div>
+</div>
+<!-- 客服 -->
+<div class="icon customer">
+    <a href=""></a>
+</div>
+<!-- 建议-->
+<div class="icon suggest">
+    <a href=""></a>
+</div>
+<script>
+    document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth/ 15 + "px";
+    // 改变窗口的时候重新计算大小
+    window.onresize = function() {
+        document.getElementsByTagName("html")[0].style.fontSize = document.documentElement.clientWidth/ 15 + "px";
+    }
+</script>
+<script src="gv/common/js/vue.min.js"></script>
+<script src="gv/common/js/jquery-1.9.1.min.js"></script>
+<script src="gv/account/components/kongjian/lunbo.js"></script>
+<script src="gv/account/js/my_rights.js"></script>
+</body>
+</html>
