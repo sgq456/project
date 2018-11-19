@@ -451,7 +451,7 @@
   font-weight: bold;
 }
 .customer {
-  position: fixed;
+  position: absolute;
   right: .58rem;
   bottom: 4rem;
   width: 2.88rem;
@@ -464,7 +464,7 @@
   height: 100%;
 }
 .suggest {
-  position: fixed;
+  position: absolute;
   right: .58rem;
   bottom: .92rem;
   width: 2.9rem;
