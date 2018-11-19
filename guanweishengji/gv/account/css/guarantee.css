@@ -40,6 +40,7 @@ body {
   height: 12.3rem;
   background: url("../images/sgq_ban@2x.png");
   background-size: 100%;
+  background-repeat: no-repeat;
   margin: 0 auto;
   box-sizing: border-box;
 }
@@ -89,6 +90,7 @@ body {
   background: url("../images/sgq_botmoney@2x.png");
   margin: 0 auto;
   background-size: 100%;
+  background-repeat: no-repeat;
 }
 .baofei .zongjiecon {
   width: 9.42rem;
@@ -142,6 +144,7 @@ body {
   line-height: 1.34rem;
   background: url("../images/sgq_title@2x.png");
   background-size: 100%;
+  background-repeat: no-repeat;
   text-align: center;
   color: #fff;
   font-size: .64rem;

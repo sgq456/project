@@ -12,6 +12,7 @@
   height: 10.6rem;
   background: url("../images/sgq_bannerbg@2x.png");
   background-size: 100%;
+  background-repeat: no-repeat;
   color: #fff;
 }
 .content .banner .touxiangBox {
@@ -42,6 +43,7 @@
   height: 2.26rem;
   background: url("../images/sgq_touxiangbox@2x.png");
   background-size: 100%;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -170,6 +172,7 @@
   -ms-flex-positive: 0;
   flex-grow: 0;
   background-size: 100%;
+  background-repeat: no-repeat;
   margin-right: .16rem;
   margin-left: .08rem;
 }
@@ -274,6 +277,7 @@
   line-height: .92rem;
   background: url("../images/sgq_daibantitle@2x.png");
   background-size: 100%;
+  background-repeat: no-repeat;
   -webkit-box-flex: 0;
   -ms-flex-positive: 0;
   flex-grow: 0;
@@ -484,6 +488,7 @@
 .rights2 .zxfwBox .dbultitle {
   background-image: url("../images/sgq_enjoy-service@2x.png");
   background-size: auto .88rem;
+  background-repeat: no-repeat;
 }
 .rights2 .zxfwBox ul {
   display: -webkit-box;
@@ -514,6 +519,7 @@
 .rights2 .vipBox .dbultitle {
   background-image: url("../images/sgq_VIP-Club-@2x.png");
   background-size: auto .88rem;
+  background-repeat: no-repeat;
 }
 .rights2 .vipBox ul {
   display: -webkit-box;
