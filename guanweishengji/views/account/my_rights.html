@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no">
+    <meta http-equiv="Content-Type" content="text/html;">
+    <meta name="format-detection" content="telephone=no,email=no">
     <title>我的权益</title>
     <base href="../../">
     <link rel="stylesheet" href="gv/common/css/reset.css">
@@ -20,7 +22,7 @@
                 <!--头像-->
                 <div class="touxiang">
                     <div class="imgbox">
-                        <img v-if="myinfo.img" :src="myinfo.img" alt="">
+                        <img v-if="myinfo.img" v-lazy="myinfo.img" alt="">
                     </div>
                 </div>
                 <div class="name" v-text="myinfo.name"></div>
@@ -109,7 +111,7 @@
                 <li v-for="(item, index) in funlist">
                     <a :href="item.url">
                         <div class="img">
-                            <img :src="item.img" alt="">
+                            <img v-lazy="item.img" alt="">
                         </div>
                         <p v-text="item.title"></p>
                     </a>
@@ -123,7 +125,7 @@
         <ul>
             <li v-for="(item, index) in teselist" :key="index">
                 <a :href="item.url">
-                    <img :src="item.img" alt="">
+                    <img v-lazy="item.img" alt="">
                 </a>
             </li>
         </ul>
@@ -148,8 +150,60 @@
     }
 </script>
 <script src="gv/common/js/vue.min.js"></script>
+<script src="gv/account/js/vue-lazyload.js"></script>
 <script src="gv/common/js/jquery-1.9.1.min.js"></script>
 <script src="gv/account/components/kongjian/lunbo.js"></script>
 <script src="gv/account/js/my_rights.js"></script>
+<script>
+    var customer = $('.customer');
+    var suggest = $('.suggest');
+    var before = $('.content').scrollTop();
+    var t = null;
+    var flag1 = true;
+    var flag2= true;
+    function goright() {
+        if (t) {
+            clearTimeout(t);
+        }
+        t = setTimeout(function () {
+            flag1 = true;
+            flag2 = true;
+            customer.stop().animate({right: '-2rem'});
+            suggest.stop().animate({right: '-2rem'});
+        }, 5000)
+    }
+    goright();
+    t = setTimeout(function () {
+
+    }, 5000);
+    $('.content').scroll(function() {
+        var after = $('.content').scrollTop();
+        if (before < after) {
+            if (flag2) {
+                flag2 = false;
+                flag1 = true;
+                if (t) {
+                    clearTimeout(t);
+                }
+                customer.stop().animate({right: '-2rem'});
+                suggest.stop().animate({right: '-2rem'});
+            }
+            before = after;
+        };
+        if (before > after) {
+            if (flag1) {
+                flag2 = true;
+                flag1 = false;
+                if (t) {
+                    clearTimeout(t);
+                }
+                customer.stop().animate({right: '0.58rem'});
+                suggest.stop().animate({right: '0.58rem'});
+                goright();
+            }
+            before = after;
+        };
+    });
+</script>
 </body>
 </html>
