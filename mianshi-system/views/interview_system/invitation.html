@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>华夏保险销售从业人员信息表</title>
+    <base href="../" />
+    <link rel="stylesheet" href="gv/common/css/reset.css">
+    <link rel="stylesheet" href="gv/common/css/mui.min.css">
+    <link rel="stylesheet" href="gv/interview_system/css/base.css">
+    <link rel="stylesheet" href="gv/interview_system/css/icon.css">
+    <link rel="stylesheet" href="gv/interview_system/css/addresume.css">
+    <style>
+        #app{
+            background: #fff;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- 推荐人 -->
+        <sgq-item>
+            <div class="tuijianren">
+                <div class="con">
+                    <div class="name" v-text="refereeName"></div>
+                    <div class="code"><span v-text="agentCode"></span> / <span v-text="comName"></span></div>
+                </div>
+            </div>
+        </sgq-item>
+        <div class="ge"></div>
+        <!--分享指示-->
+        <div class="shareBox">
+            <div class="border1pxh"></div>
+            <div class="bg"></div>
+            <div class="btn"><span>点击右上角“</span><span class="icon iconsharebtn"></span><span>”分享给被邀约人</span></div>
+            <p class="center">邀请被邀约人填写华夏保险销售从业人员信息表</p>
+        </div>
+    </div>
+    <script src="gv/common/js/jquery-1.9.1.min.js"></script>
+    <script src="gv/common/js/common.js"></script>
+    <script src="gv/interview_system/config/index.js"></script>
+    <script src="gv/interview_system/api/index.js"></script>
+    <script src="gv/common/js/vconsole.min.js"></script>
+    <script src="gv/common/js/vue2.2.2.min.js"></script>
+    <script src="gv/common/js/mui.min3.4.1.js"></script>
+    <script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+    <script src="gv/interview_system/api/wx.js"></script>
+    <script>
+        var myAPP = new Vue({
+            el: '#app',
+            data: function () {
+                return {
+//                    邀请人
+                    refereeName: '夯实那',
+                    agentCode: '2139042',
+                    comName: '部门',
+                    link: '',
+//                    邀请人
+//                    api
+                    HandleData: {
+                        workResume_main: workResume_main
+                    }
+                }
+            },
+            methods: {
+//             获取我的信息
+                getinfo: function () {
+                    var that = this;
+                    this.NG('workResume_main', {}, function (res) {
+                        that.refereeName = res.refereeName;
+                        that.agentCode =  resagentCode.;
+                        that.comName = res.comName;
+                    })
+                },
+//                设置分享
+                share: function () {
+                    wx_share('面试邀请','欢迎您参加华夏保险的面试邀请', this.link, 'gv/interview_system/images/hxlogo.png');
+                },
+                NG: function (type,dates,success) {
+                    this.HandleData[type].apply(this, [dates, success]);
+                }
+            },
+            mounted: function () {
+                this.$nextTick(function () {
+//                    this.initpickers();
+
+                })
+            }
+        })
+
+    </script>
+</body>
+</html>

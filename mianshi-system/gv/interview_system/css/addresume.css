@@ -1,0 +1,201 @@
+#app {
+  color: #666666;
+  font-size: .52rem;
+  line-height: normal;
+}
+.sgq_title {
+  color: #999999;
+  font-size: .4rem;
+  background: #efeff3;
+  padding: .4rem .68rem .4rem .76rem;
+}
+.sgq_item {
+  background: #fff;
+}
+.con {
+  padding: .9rem .68rem .9rem .76rem;
+}
+.infoitem {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  white-space: nowrap;
+}
+.infoitem .title {
+  margin-right: 10px;
+}
+.infoitem .inputBox {
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+.infoitem .inputBox input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  text-align: right;
+  font-size: .52rem;
+  margin: 0;
+  padding: 0;
+}
+.infoitem .inputBox .radiobox {
+  width: 3.82rem;
+  height: 1.04rem;
+  overflow: hidden;
+  border: 1px solid #e0e0e0;
+  border-radius: .52rem;
+  float: right;
+  display: flex;
+  flex-flow: row nowrap;
+}
+.infoitem .inputBox .radiobox .item:first-child {
+  border-right: 0.02rem solid #e0e0e0;
+}
+.infoitem .inputBox .radiobox .item {
+  width: 50%;
+  text-align: center;
+  line-height: 1.04rem;
+  transition: all .3s;
+}
+.infoitem .inputBox .radiobox .item.active {
+  background: #b8b8b8;
+  color: #fff;
+}
+.infoitem .inputBox ::-webkit-input-placeholder {
+  /* WebKit, Blink, Edge */
+  color: #d6d6d6;
+}
+.infoitem .inputBox :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #d6d6d6;
+}
+.infoitem .inputBox ::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  color: #d6d6d6;
+}
+.infoitem .inputBox :-ms-input-placeholder {
+  /* Internet Explorer 10-11 */
+  color: #d6d6d6;
+}
+.sgqformline:last-child .border1pxh {
+  display: none;
+}
+.addbtn {
+  background: #fff;
+}
+.addbtn .con {
+  padding-top: .4rem;
+  padding-bottom: .4rem;
+}
+.addbtn .con .add {
+  display: block;
+  width: .52rem;
+  height: .52rem;
+  background-size: contain;
+  margin-right: .4rem;
+}
+.addbtn .con .btn {
+  border-radius: 0;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  border: 1px solid #e0e0e0;
+  line-height: 1.56rem;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.addbtn .con .btntext {
+  color: #000;
+  font-size: .52rem;
+}
+.picker {
+  box-sizing: border-box;
+  padding-right: .8rem;
+  text-align: right;
+  min-height: .7rem;
+  background-position: center right;
+  background-size: auto .48rem;
+}
+.tuijianren {
+  background: #fff;
+}
+.tuijianren .con {
+  background: url("../images/sgq_tuijian_label.png");
+  background-position: top right;
+  background-size: 2.04rem auto;
+  background-repeat: no-repeat;
+}
+.tuijianren .name {
+  color: #000;
+  font-size: .76rem;
+  box-sizing: content-box;
+  margin-bottom: .14rem;
+}
+.tuijianren .code {
+  font-size: .48rem;
+}
+.jtqk .item:first-child,
+.gzjy .item:first-child {
+  margin-top: 0;
+}
+.jtqk .item,
+.gzjy .item {
+  margin-top: 0.18rem;
+}
+.shareBox .bg {
+  margin-top: 2.04rem;
+  margin-bottom: 1.12rem;
+  height: 4.68rem;
+  background: url("../images/sgq_share_icon.png");
+  background-position: center;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.shareBox .btn {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  height: 1.2rem;
+  line-height: 1.2rem;
+  font-size: .68rem;
+  color: #333;
+  font-weight: bold;
+}
+.shareBox .btn .icon {
+  display: block;
+  width: 1.2rem;
+  height: 1.2rem;
+  background-size: contain;
+}
+.shareBox p {
+  margin-top: .6rem;
+  font-size: .52rem;
+  color: #666;
+}
+.btns {
+  margin-top: 1.92rem;
+}
+.btns .mui-btn {
+  margin: 0 auto;
+  width: 13.8rem;
+  display: block;
+  margin-bottom: .6rem;
+  border-radius: 0;
+  font-size: .64rem;
+  height: 1.76rem;
+}
+.btns .mui-btn-danger {
+  background-color: #ff3a31;
+  border-color: #ff3a31;
+}
+.yaoyue {
+  background: #fff;
+  margin-top: 0;
+  padding-top: .4rem;
+}
+.yaoyue .mui-btn-danger {
+  margin-bottom: .4rem;
+}

@@ -1,0 +1,142 @@
+#app{
+  background: #fff;
+  color: #333;
+  font-size: .52rem;
+  line-height: normal;
+}
+body.pass{
+  .mui-popup-text{
+    font-size: 18px;
+    font-weight: bold;
+  }
+}
+.con{
+  padding-left: .6rem;
+  padding-right: .6rem;
+}
+.ge{
+  height: .2rem;
+  background: #efeff3;
+}
+// 头部
+.header{
+  background: #fff;
+  padding: .58rem .6rem .54rem .6rem;
+  .ewm{
+    width: 2.2rem;
+    border: 1px solid #e0e0e0;
+    padding: .18rem;
+    margin: 0 auto .4rem;
+    img{
+      width: 100%;
+    }
+  }
+}
+// 主体
+.main{
+  background: #fff;
+  // 查询
+  .searchBox{
+    padding: .4rem 0;
+    .inputBox{
+      display: flex;
+      flex-flow: row nowrap;
+      justify-content: flex-start;
+      align-items: center;
+      height: 1.2rem;
+      background: #efeff3;
+      border-radius: .2rem;
+      overflow: hidden;
+      .search{
+        width: 1.24rem;
+        height: 100%;
+        background-size: .62rem auto;
+        background-position: center right;
+        margin-right: .4rem;
+      }
+      input{
+        height: 100%;
+        flex-grow: 1;
+        flex-shrink: 1;
+        outline: none;
+        padding: 0;
+        margin: 0;
+        border: none;
+        background: transparent;
+        font-size: .52rem;
+      }
+      ::-webkit-input-placeholder { /* WebKit, Blink, Edge */
+        color:    #b3b3b3;
+      }
+      :-moz-placeholder { /* Mozilla Firefox 4 to 18 */
+        color:    #b3b3b3;
+      }
+      ::-moz-placeholder { /* Mozilla Firefox 19+ */
+        color:    #b3b3b3;
+      }
+      :-ms-input-placeholder { /* Internet Explorer 10-11 */
+        color:    #b3b3b3;
+      }
+    }
+  }
+  // 选择器
+  .tabs{
+    height: 1.6rem;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    .icon{
+      display: block;
+      width: 12px;
+      height: 7px;
+      background-size: contain;
+      margin-left: .32rem;
+    }
+  }
+//  内容
+  .win{
+    padding-bottom: 1.2rem;
+    // 人员列表
+    .list{
+      .info{
+        background: url("../images/sgq_jiantou@2x.png");
+        background-size: .26rem .48rem;
+        background-repeat: no-repeat;
+        background-position: right center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        .name{
+          display: flex;
+          flex-flow: row nowrap;
+          justify-content: space-between;
+          align-items: center;
+          width: 8.66rem;
+        }
+        .btns{
+          margin-right: .8rem;
+          display: flex;
+          flex-flow: column nowrap;
+          .mui-btn{
+            width: 2.4rem;
+            height: 1.04rem;
+            line-height: 1.04rem;
+            font-size: .52rem;
+            padding: 0;
+            text-align: center;
+          }
+          .mui-btn-success{
+            margin-bottom: .2rem;
+          }
+          .mui-btn-danger{
+
+          }
+        }
+      }
+    }
+  }
+}

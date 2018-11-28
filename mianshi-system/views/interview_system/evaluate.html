@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>面试感受评价</title>
+    <base href="../" />
+    <link rel="stylesheet" href="gv/common/css/reset.css">
+    <link rel="stylesheet" href="gv/common/css/mui.min.css">
+    <link rel="stylesheet" href="gv/interview_system/css/base.css">
+    <link rel="stylesheet" href="gv/interview_system/css/icon.css">
+    <link rel="stylesheet" href="gv/interview_system/css/evaluate.css">
+</head>
+<body>
+    <div id="app">
+        <div class="con">
+            <div class="title">通过本次面试，您对华夏保险的印象如何？</div>
+            <!-- 评价 -->
+            <div class="pingjia">
+                <ul>
+                    <li @click="checkpingjia('1')">
+                        <div class="icon pingjia1" :class="startLevel==1?'active':''"></div>
+                        <div>棒极了</div>
+                    </li>
+                    <li @click="checkpingjia('2')">
+                        <div class="icon pingjia1" :class="startLevel==2?'active':''"></div>
+                        <div>感觉良好</div>
+                    </li>
+                    <li @click="checkpingjia('3')">
+                        <div class="icon pingjia1" :class="startLevel==3?'active':''"></div>
+                        <div>感觉一般</div>
+                    </li>
+                    <li @click="checkpingjia('4')">
+                        <div class="icon pingjia1" :class="startLevel==4?'active':''"></div>
+                        <div>糟透了</div>
+                    </li>
+                </ul>
+                <div class="text">
+                    <textarea name="" id="" placeholder="请留下您的宝贵意见" v-model="evaluation"></textarea>
+                </div>
+            </div>
+        </div>
+        <!-- 底部按钮 -->
+        <div class="btns">
+            <div class="con">
+                <button type="button" class="mui-btn mui-btn-danger" @click="submits">提交</button>
+            </div>
+        </div>
+    </div>
+<script src="gv/common/js/jquery-1.9.1.min.js"></script>
+<script src="gv/common/js/common.js"></script>
+<script src="gv/interview_system/config/index.js"></script>
+<script src="gv/interview_system/api/index.js"></script>
+<script src="gv/common/js/vconsole.min.js"></script>
+<script src="gv/common/js/vue2.2.2.min.js"></script>
+<script src="gv/common/js/mui.min3.4.1.js"></script>
+<script src="http://res.wx.qq.com/open/js/jweixin-1.2.0.js"></script>
+
+    <script>
+     var interviewId = GetQueryString('interviewId');
+    var myAPP = new Vue({
+        el: '#app',
+        data: function () {
+            return {
+//                工具
+                flag: true,
+//                工具
+//                评价等级
+                startLevel: '',
+//                评价语
+                evaluation: '',
+//                面试表id
+                interviewId: interviewId,
+//                    api
+                HandleData: {
+                    workResume_evaluation: workResume_evaluation
+                }
+            }
+        },
+        methods:{
+            checkpingjia: function (i) {
+                this.startLevel = i;
+            },
+            submits: function() {
+                var that = this;
+                console.log(that.flag);
+                var datas = {
+                    interviewId: this.interviewId,
+                    startLevel: this.startLevel,
+                    evaluation: this.evaluation
+                };
+
+                if (this.startLevel.trim() === '') {
+                    mui.alert('请选择评价等级！');
+                    return
+                }
+                if (this.evaluation.trim() === '') {
+                    mui.alert('请填写评价！');
+                    return
+                }
+                this.G('workResume_evaluation', datas, function () {
+                    that.flag = false;
+                    mui.alert('评价成功！');
+                    setTimeout(function () {
+                        try {
+                            wx.closeWindow();
+                        } catch (e) {
+                            window.close();
+                        }
+                    }, 1000);
+                })
+            },
+            //                工具
+            G: function (type,dates,success) {
+                if(this.flag){
+                    this.flag = false;
+                    this.HandleData[type].apply(this, [dates, success]);
+                }
+            },
+            NG: function (type,dates,success) {
+                this.HandleData[type].apply(this, [dates, success]);
+            }
+        },
+        mounted: function () {
+            this.$nextTick(function () {
+            })
+        }
+    })
+
+</script>
+</body>
+</html>

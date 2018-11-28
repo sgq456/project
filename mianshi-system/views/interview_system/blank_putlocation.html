@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="Content-Type" content="text/html;">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no" />
+    <meta name="format-detection" content="telephone=no,email=no">
+    <title>获取地理位置</title>
+    <base href="../" />
+</head>
+<body>
+<script src="gv/common/js/jquery-1.9.1.min.js"></script>
+<script src="gv/common/js/common.js"></script>
+<script src="gv/interview_system/config/index.js"></script>
+<script src="gv/interview_system/api/index.js"></script>
+<script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.10&key=94ffaeec66243b39d8e94fa639dfe1bf"></script>
+<script src="gv/interview_system/api/getLocation.js"></script>
+<script>
+    var data = GetQueryString('data');
+    var openid = GetQueryString('openid');
+    gd_getLocation(function (latitude, longitude, e) {
+        console.log(latitude);
+        console.log(longitude);
+        console.log(e);
+        if (latitude === 'error') {
+            mui.alert('获取地理位置失败，请重新操作！');
+//                            setTimeout(function () {
+//                                window.location.reload();
+//                            }, 1000)
+        } else {
+//                            if (e > 200) {
+//                                mui.alert('获取地理位置失败，1s后将刷新重试！');
+//                                setTimeout(function () {
+//                                    window.location.reload();
+//                                }, 1000)
+//                            } else {
+            workResume_bindInterViewer({data: data, openid: openid,  cumlongitude: longitude, cumlatitude: latitude}, function (res) {
+                if (res) {
+                }
+            })
+//                            }
+        }
+    })
+</script>
+</body>
+</html>
