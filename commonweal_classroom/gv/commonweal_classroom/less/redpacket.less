@@ -1,0 +1,396 @@
+@media all and (orientation: portrait) {
+//  竖屏
+}
+
+@media all and (orientation: landscape) {
+// 横屏
+  body{
+    overflow: auto;
+  }
+  #app{
+    min-height: 160vw;
+  }
+}
+
+#app{
+  background: url("../images/red_bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  overflow: hidden;
+  position: relative;
+  font-family: "PingFangSC", "微软雅黑", Tahoma, Helvetica, Arial, sans-serif;
+}
+// 装饰
+.zs{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+}
+.d1{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5.34rem;
+  z-index: 2;
+  animation: shake 5s infinite linear;
+}
+.d2{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 5.42rem;
+  z-index: 2;
+  animation: shake 5s infinite linear;
+
+}
+.money{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("../images/red_money.png") repeat-y;
+  background-size: 100% auto;
+  z-index: 7;
+  animation: dropmoney 2000s infinite linear;
+}
+.yan{
+  position: absolute;
+  bottom: 7.36rem;
+  right: 0;
+  z-index: 4;
+  width: 2.06rem;
+}
+.flw{
+  position: absolute;
+  width: 1.74rem;
+  height: 1.62rem;
+  background: url("../images/red_flw.png") no-repeat;
+  background-size: contain;
+  z-index: 4;
+}
+.flw1{
+  top: 1rem;
+  right: 2.68rem;
+  animation: scale 4s infinite;
+}
+.flw2{
+  bottom: 10.62rem;
+  left: 1.72rem;
+  animation: scale 4.5s 0.5s infinite;
+}
+.yun1{
+  position: absolute;
+  width: 3.14rem;
+  left: 0;
+  bottom:  6.42rem;
+  z-index: 8;
+  animation: lrweidong 10s infinite;
+}
+.yun2{
+  position: absolute;
+  width: 3.8rem;
+  right: 1.12rem;
+  bottom:  2.54rem;
+  z-index: 8;
+  transition: bottom 2s;
+  animation: lrweidong 11.5s infinite;
+}
+.yun2.move{
+  bottom: -120%;
+}
+.yun3{
+  position: absolute;
+  width: 3.8rem;
+  right: -120%;
+  top:  6.98rem;
+  z-index: 8;
+  transition: right 2s;
+  animation: lrweidong 11.5s infinite;
+}
+.yun3.in{
+  right: 0;
+}
+// 装饰
+// 内容
+.logo{
+  position: relative;
+  margin-top: .4rem;
+  margin-left: .4rem;
+  width: 4.02rem;
+  height: .94rem;
+  background: url("../images/red_logo.png") no-repeat;
+  background-size: contain;
+  z-index: 5;
+}
+// 未开奖标题
+.noopen{
+  position: absolute;
+  top: 4.28rem;
+  left: 0;
+  right: 0;
+  margin: auto;
+  //margin-top: 2.98rem;
+  z-index: 6;
+  transition: top 2s;
+  img{
+    display: block;
+    width: 12.94rem;
+    margin: 0 auto;
+  }
+}
+.noopen.move{
+  top: -150%;
+}
+.guize{
+  position: absolute;
+  top: 10.36rem;
+  right: 0;
+  height: 1.08rem;
+  line-height: 1.08rem;
+  color: #f5d3a1;
+  font-size: .56rem;
+  padding-left: .4rem;
+  padding-right: .4rem;
+  border-top-left-radius: .54rem;
+  border-bottom-left-radius: .54rem;
+  background: #ff6f44;
+  margin-top: 1.02rem;
+  z-index: 100;
+}
+.jiang{
+  transform: scale(0);
+  transition: all 1s;
+  width: 12.08rem;
+  padding-top: 3.24rem;
+  position: absolute;
+  top: 60%;
+  background: url("../images/red_gongxi.png") no-repeat top center;
+  background-size: 10.84rem auto;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  color: rgb(255, 255, 255);
+  z-index: 2;
+  img{
+    display: block;
+    width: 5.2rem;
+    margin: 0 auto;
+  }
+  .jiangtitle{
+    margin-top: .66rem;
+    font-size: .88rem;
+  }
+  .dian{
+    margin-top: .2rem;
+    white-space: nowrap;
+    width: 100%;
+    overflow: hidden;
+    letter-spacing: .2rem;
+  }
+  .lianxi{
+    margin-top: .46rem;
+    .icon{
+      display: inline-block;
+      width: .44rem;
+      height: .5rem;
+      background-size: contain;
+      vertical-align: middle;
+    }
+    i{
+      font-weight: lighter;
+      margin-left: .2rem;
+      margin-right: .2rem;
+      font-size: .56rem;
+      vertical-align: middle;
+      white-space: nowrap;
+    }
+  }
+  .btns{
+    overflow: hidden;
+    margin-top: .62rem;
+  }
+}
+.jiang.in{
+  transform: scale(1);
+  top: 2.94rem;
+  z-index: 8;
+}
+.bao{
+  position: absolute;
+  bottom: .6rem;
+  left: 0;
+  width: 100%;
+  z-index: 5;
+  transition: all 1s;
+  img{
+    display: block;
+    width: 12.34rem;
+    margin: 0 auto;
+  }
+  .open{
+    background: url("../images/red_open.png") no-repeat;
+    background-size: contain;
+    width: 2.98rem;
+    height: 2.98rem;
+    position: absolute;
+    top: 5.06rem;
+    left: 6.14rem;
+    margin: auto;
+    animation: roll 5s infinite linear	;
+  }
+  .ms{
+    position: absolute;
+    bottom: .66rem;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    font-size: .52rem;
+    color: rgb(240, 212, 167);
+  }
+}
+.bao_open{
+  bottom: -6rem;
+}
+.openbtn{
+  position: absolute;
+  bottom: 3.6rem;
+  left: 6.14rem;
+  width: 2.98rem;
+  height: 2.98rem;
+  margin: auto;
+  z-index: 100;
+}
+// 内容
+// 底部装饰
+.bot{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 10;
+}
+.bot_shu{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 3.54rem;
+  z-index: 12;
+}
+.bot_flw{
+  position: absolute;
+  bottom: 0;
+  right: .52rem;
+  width: 2.14rem;
+  z-index: 11;
+  animation: yao 3s infinite;
+}
+// 动画
+@keyframes roll {
+  0% {
+    transform: rotate(0);
+  }
+  100%{
+    transform: rotate(360deg);
+  }
+}
+@keyframes scale {
+  0% {
+    transform: scale(0);
+  }
+  20% {
+    transform: scale(0);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes shake {
+  0% {
+    transform: translateY(0);
+  }
+  20%{
+    transform: translateY(-.2rem);
+  }
+  40%{
+    transform: translateY(-.3rem);
+  }
+  50%{
+    transform: translateY(-.35rem);
+  }
+  60%{
+    transform: translateY(-.3rem);
+  }
+  80%{
+    transform: translateY(-.2rem);
+  }
+  100%{
+    transform: translateY(0);
+  }
+}
+@keyframes lrweidong {
+  0% {
+    transform: translateX(0);
+  }
+  20%{
+    transform: translateX(-.2rem);
+  }
+  40%{
+    transform: translateX(-.3rem);
+  }
+  50%{
+    transform: translateX(-.35rem);
+  }
+  60%{
+    transform: translateX(-.3rem);
+  }
+  80%{
+    transform: translateX(-.2rem);
+  }
+  100%{
+    transform: translateX(0);
+  }
+}
+@keyframes dropmoney {
+  0%{
+    background-position-y: 0;
+  }
+  100%{
+    background-position-y: 10000vh;
+  }
+}
+@keyframes shakes {
+  0%,to {
+    transform: translateZ(0)
+  }
+
+  10%,30%,50%,70%,90% {
+    transform: translate3d(-10px,0,0)
+  }
+
+  20%,40%,60%,80% {
+    transform: translate3d(10px,0,0)
+  }
+}
+@keyframes yao {
+  0%,11.1%,to {
+    transform: none
+  }
+  22.2% {
+    transform: skewX(-1.2deg) skewY(-1.2deg)
+  }
+
+  33.3% {
+    transform: skewX(1deg) skewY(1deg)
+  }
+  33.4% {
+    transform: none
+  }
+}
+
+.shake {
+  animation: shakes 2s infinite;
+}

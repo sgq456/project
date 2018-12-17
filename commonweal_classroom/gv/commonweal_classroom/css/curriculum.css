@@ -1,0 +1,44 @@
+.banner {
+  background-color: #343434;
+  height: 8.4rem;
+}
+.banner ul {
+  height: 100%;
+}
+.banner ul li {
+  height: 100%;
+  position: relative;
+}
+.banner ul li img {
+  display: block;
+  margin: 0 auto;
+  height: 100%;
+}
+.banner ul li a {
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.502);
+  background-size: 2.08rem 2.08rem;
+  background-position: center;
+}
+.jinlika {
+  margin-bottom: .6rem;
+}
+.jinlika .title {
+  font-size: .6rem;
+  color: #4d4d4d;
+}
+.jinlika .img {
+  height: 3.6rem;
+  background: url("../images/jinlika.png");
+  background-size: cover;
+  background-position: center;
+  margin-top: .22rem;
+}
+.jinlika .img a {
+  display: block;
+  height: 100%;
+}
