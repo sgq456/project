@@ -1,0 +1,30 @@
+.icon {
+  background-repeat: no-repeat;
+}
+.icon.kehu {
+  background-image: url("../images/index_kehu.png");
+}
+.icon.tuandui {
+  background-image: url("../images/index_tuandui.png");
+}
+.icon.play {
+  background-image: url("../images/play.png");
+}
+.icon.leftsanjiao {
+  background-image: url("../images/red_leftsanjiao.png");
+}
+.icon.rightsanjiao {
+  background-image: url("../images/red_rightsanjiao.png");
+}
+.icon.leftsanjiaoh {
+  background-image: url("../images/red_leftsanjiaoh.png");
+}
+.icon.rightsanjiaoh {
+  background-image: url("../images/red_rightsanjiaoh.png");
+}
+.icon.notetitlel {
+  background-image: url("../images/red_titleleft.png");
+}
+.icon.notetitler {
+  background-image: url("../images/red_titleright.png");
+}

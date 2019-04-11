@@ -1,0 +1,151 @@
+.banner {
+  height: 5.6rem;
+  overflow: hidden;
+}
+.banner ul {
+  height: 100%;
+}
+.banner ul li {
+  height: 100%;
+  background: url("../images/index_banner.png");
+  background-size: cover;
+  background-position: center;
+}
+.banner ul li a {
+  display: block;
+  height: 100%;
+}
+.tab {
+  border-radius: .2rem;
+  background-color: #fff;
+  box-shadow: 0 0.04rem 0.2rem 0 rgba(216, 225, 231, 0.294);
+  margin-left: .04rem;
+  width: 13.98rem;
+  height: 2.8rem;
+  margin-top: -0.58rem;
+}
+.tab ul {
+  height: 100%;
+  overflow: hidden;
+}
+.tab li {
+  float: left;
+  width: 50%;
+  height: 100%;
+}
+.tab li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  line-height: 2.8rem;
+}
+.tab li .icon {
+  width: 1.4rem;
+  height: 1.4rem;
+  display: inline-block;
+  background-size: auto 1.4rem;
+  background-position: center;
+  vertical-align: middle;
+  margin-right: .3rem;
+}
+.tab li i {
+  font-size: .6rem;
+  color: #000;
+  vertical-align: middle;
+}
+.tab li .xian {
+  float: right;
+  height: .92rem;
+  width: 1px;
+  background: #e1e1e1;
+  margin-top: .94rem;
+}
+.kecheng {
+  padding-bottom: .74rem;
+}
+.haibaoBox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  overflow: auto;
+}
+.haibaoBox .haibao {
+  margin: 0 auto;
+  border-radius: .12rem;
+  background-color: #fff;
+  width: 11.6rem;
+  margin-top: 1.64rem;
+  padding: .4rem;
+}
+.haibaoBox .haibao .imgBox {
+  position: relative;
+  border-radius: .12rem;
+  background-color: #e6e6e6;
+  height: 16.08rem;
+  margin-bottom: .3rem;
+}
+.haibaoBox .haibao .imgBox img {
+  width: 100%;
+}
+.haibaoBox .haibao .imgBox .lable {
+  position: absolute;
+  left: 0;
+  top: .6rem;
+  background-color: #ffa146;
+  height: .84rem;
+  border-top-right-radius: .42rem;
+  border-bottom-right-radius: .42rem;
+  font-size: .48rem;
+  color: #ffffff;
+  line-height: .84rem;
+  padding-left: .18rem;
+  padding-right: .3rem;
+}
+.haibaoBox .haibao .ewmbox .img {
+  margin-right: .4rem;
+}
+.haibaoBox .haibao .ewmbox .img img {
+  width: 2.1rem;
+}
+.haibaoBox .haibao .ewmbox .con {
+  max-width: 8.26rem;
+  padding-top: .08rem;
+}
+.haibaoBox .haibao .ewmbox h2 {
+  font-size: .6rem;
+  margin-bottom: .3rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.haibaoBox .haibao .ewmbox span {
+  color: #999999;
+  font-size: .48rem;
+}
+.haibaoBox .kapian {
+  position: relative;
+  margin: 0 auto;
+  border-radius: .12rem;
+  background-color: #fff;
+  width: 11.6rem;
+  margin-bottom: .5rem;
+}
+.haibaoBox .kapian .tishi {
+  margin-top: .18rem;
+  padding-bottom: .48rem;
+  text-align: center;
+  color: #999999;
+  font-size: .48rem;
+}
+.haibaoBox .kapian .haibaoimg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
